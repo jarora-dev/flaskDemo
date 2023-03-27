@@ -45,9 +45,8 @@ def get_students():
     except:
         return jsonify({'message': 'An error occurred while getting the students.'}), 500
 
+
 # Route for getting a specific student
-
-
 @app.route('/students/<int:student_id>', methods=['GET'])
 def get_student(student_id):
     try:
