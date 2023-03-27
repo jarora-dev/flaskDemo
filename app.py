@@ -94,13 +94,6 @@ def delete_student(student_id):
     except:
         return jsonify({'message': 'An error occurred while deleting the student.'}), 500
 
-# Function to close database connection
-
-
-@app.teardown_appcontext
-def close_connection(exception):
-    conn.close()
-
 
 if __name__ == '__main__':
     app.run(debug=True)
